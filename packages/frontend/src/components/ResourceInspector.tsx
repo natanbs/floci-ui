@@ -42,6 +42,14 @@ export function ResourceInspector({
             label="Last Modified"
             value={object.lastModified ?? "-"}
           />
+          <InspectorItem
+            label="Storage Class"
+            value={getStringMetadata(object.metadata.storageClass) ?? "-"}
+          />
+          <InspectorItem
+            label="ETag"
+            value={getStringMetadata(object.metadata.etag) ?? "-"}
+          />
         </div>
         <MetadataPanel metadata={object.metadata} />
       </aside>
